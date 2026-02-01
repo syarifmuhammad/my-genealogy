@@ -89,7 +89,6 @@ RUN yarn config set strict-ssl false && \
 COPY resources ./resources
 COPY public ./public
 COPY vite.config.js ./
-COPY tailwind.config.js ./
 COPY storage ./storage
 
 # Copy vendor directory from composer stage (needed for Filament CSS imports)
