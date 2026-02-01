@@ -21,7 +21,7 @@ final class UserSeeder extends Seeder
             'surname'      => 'Developer',
             'email'        => 'developer@genealogy.test',
             'is_developer' => true,
-            'timezone'     => 'Europe/Brussels',
+            'timezone'     => 'Asia/Makassar',
         ])->withPersonalTeam()->create();
 
         if (app()->isLocal()) {

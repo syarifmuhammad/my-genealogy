@@ -49,6 +49,7 @@ return new class extends Migration
             $table->string('photo')->nullable();
 
             $table->unsignedBigInteger('team_id')->nullable()->index();
+            $table->boolean('is_public')->default(false);
             // ---------------------------------------------------------------------
             $table->timestamps();
             $table->softDeletes()->index();

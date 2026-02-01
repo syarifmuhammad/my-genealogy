@@ -33,7 +33,7 @@
             {{-- sex & gender --}}
             <tr>
                 <td>&nbsp;</td>
-                <td class="border-b-2 border-gray-600 border-solid">{{ __('person.sex') }} & {{ __('person.gender') }}</td>
+                <td class="border-b-2 border-gray-600 border-solid">{{ __('person.sex') }}</td>
                 <td colspan="2" class="border-b-2 border-gray-600 border-solid">&nbsp;</td>
             </tr>
             <tr class="align-top">
@@ -43,11 +43,6 @@
                     {{ $person->sex === 'm' ? __('app.male') : __('app.female') }}
                     <x-ts-icon icon="tabler.{{ $person->sex === 'm' ? 'gender-male' : 'gender-female' }}" class="inline-block size-5" />
                 </td>
-            </tr>
-            <tr class="align-top">
-                <td colspan="2">&nbsp;</td>
-                <td>{{ __('person.gender') }} :</td>
-                <td class="wrap-break-word max-w-sm">{{ $person->gender ? $person->gender->name : '' }}</td>
             </tr>
 
             {{-- birth --}}

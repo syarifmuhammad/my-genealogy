@@ -13,62 +13,7 @@ final class TeamSeeder extends Seeder
 {
     public function run(): void
     {
-        // -----------------------------------------------------------------------------------
-        // preload users in one query
-        // -----------------------------------------------------------------------------------
-        $users = User::whereIn('surname', [
-            'Administrator',
-            'Manager',
-            'Editor',
-            'Member 1',
-            'Member 2',
-            'Member 3',
-            'Member 4',
-            'Member 5',
-            'Member 6',
-        ])->get()->keyBy('surname');
-
-        // -----------------------------------------------------------------------------------
-        // create demo teams (owned by administrator)
-        // -----------------------------------------------------------------------------------
-        $teamBritishRoyals = $this->createTeam(
-            'administrator@genealogy.test',
-            'BRITISH ROYALS',
-            'Part of the British Royal family around Queen Elizabeth II'
-        );
-
-        $teamKennedy = $this->createTeam(
-            'administrator@genealogy.test',
-            'KENNEDY',
-            'Part of the Kennedy family around former US President John Fitzgerald Kennedy'
-        );
-
-        // -----------------------------------------------------------------------------------
-        // administrator: only set current team
-        // -----------------------------------------------------------------------------------
-        $users['Administrator']->update([
-            'current_team_id' => $teamBritishRoyals->id,
-        ]);
-
-        // -----------------------------------------------------------------------------------
-        // manager in British Royals
-        // -----------------------------------------------------------------------------------
-        $this->assignUserToTeam($users['Manager'], $teamBritishRoyals, 'manager');
-
-        // -----------------------------------------------------------------------------------
-        // editor in Kennedy
-        // -----------------------------------------------------------------------------------
-        $this->assignUserToTeam($users['Editor'], $teamKennedy, 'editor');
-
-        // -----------------------------------------------------------------------------------
-        // members 1–3 in British Royals
-        // -----------------------------------------------------------------------------------
-        collect([1, 2, 3])->each(fn ($i) => $this->assignUserToTeam($users['Member ' . $i], $teamBritishRoyals, 'member'));
-
-        // -----------------------------------------------------------------------------------
-        // members 4–6 in Kennedy
-        // -----------------------------------------------------------------------------------
-        collect([4, 5, 6])->each(fn ($i) => $this->assignUserToTeam($users['Member ' . $i], $teamKennedy, 'member'));
+        
     }
 
     // -----------------------------------------------------------------------------------

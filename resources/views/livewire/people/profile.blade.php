@@ -103,10 +103,6 @@
                         <x-ts-icon icon="tabler.{{ $person->sex === 'm' ? 'gender-male' : 'gender-female' }}" class="inline-block size-5" />
                     </td>
                 </tr>
-                <tr class="align-top border-b-2">
-                    <td class="pr-2 border-r-2">{{ __('person.gender') }}</td>
-                    <td class="pl-2 wrap-break-word max-w-sm">{{ $person->gender ? $person->gender->name : '' }}</td>
-                </tr>
 
                 <tr class="align-top">
                     <td class="pr-2 border-r-2">{{ __('person.dob') }}</td>

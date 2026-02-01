@@ -22,7 +22,7 @@ final class DatabaseSeeder extends Seeder
         $this->call([
             UserSeeder::class,
             TeamSeeder::class,
-            DemoSeeder::class,
+            // DemoSeeder::class,
 
             // TreeSeeder::class,
         ]);
