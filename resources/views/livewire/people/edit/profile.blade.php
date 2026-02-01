@@ -18,19 +18,9 @@
             <x-ts-errors class="mb-2" close />
 
             <div class="grid grid-cols-6 gap-5">
-                {{-- firstname --}}
-                <div class="col-span-6 md:col-span-3">
-                    <x-ts-input wire:model="firstname" id="firstname" label="{{ __('person.firstname') }} :" autofocus />
-                </div>
-
                 {{-- surname --}}
                 <div class="col-span-6 md:col-span-3">
                     <x-ts-input wire:model="surname" id="surname" label="{{ __('person.surname') }} : *" required />
-                </div>
-
-                {{-- birthname --}}
-                <div class="col-span-6 md:col-span-3">
-                    <x-ts-input wire:model="birthname" id="birthname" label="{{ __('person.birthname') }} :" />
                 </div>
 
                 {{-- nickname --}}

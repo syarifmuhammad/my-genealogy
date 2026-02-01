@@ -80,16 +80,8 @@
         <table class="w-full">
             <tbody>
                 <tr class="align-top">
-                    <td class="pr-2 border-t-2 border-r-2">{{ __('person.firstname') }}</td>
-                    <td class="pl-2 wrap-break-word border-t-2 max-w-sm">{{ $person->firstname }}</td>
-                </tr>
-                <tr class="align-top">
                     <td class="pr-2 border-r-2">{{ __('person.surname') }}</td>
                     <td class="pl-2 wrap-break-word max-w-sm">{{ $person->surname }}</td>
-                </tr>
-                <tr class="align-top">
-                    <td class="pr-2 border-r-2">{{ __('person.birthname') }}</td>
-                    <td class="pl-2 wrap-break-word max-w-sm">{{ $person->birthname }}</td>
                 </tr>
                 <tr class="align-top border-b-2">
                     <td class="pr-2 border-r-2">{{ __('person.nickname') }}</td>
