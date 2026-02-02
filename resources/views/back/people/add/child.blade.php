@@ -27,7 +27,7 @@
                 <livewire:people.files :person="$person" />
             </div>
 
-            <div class="flex flex-col grow gap-5 overflow-x-auto min-w-[25rem] md:max-w-max">
+            <div class="flex flex-col grow gap-5 min-w-[25rem] md:max-w-max">
                 <livewire:people.add.child :person="$person" />
             </div>
         </div>
